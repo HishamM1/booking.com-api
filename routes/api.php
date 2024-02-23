@@ -21,5 +21,6 @@ Route::post('auth/register', RegisterController::class);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('owner/properties', [PropertyController::class, 'index']);
+    Route::post('owner/properties', [PropertyController::class, 'store']);
     Route::get('user/bookings', [BookingController::class, 'index']);
 });
